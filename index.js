@@ -90,6 +90,8 @@ app.post('/api/persons', (request, response, next) => {
 
   newPerson.save().then(savedPerson => {
     response.json(savedPerson)
+  }).catch(error => {
+    next(error)
   })
 })
 app.put('/api/persons/:id', (request, response, next) => {
