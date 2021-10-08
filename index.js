@@ -9,9 +9,8 @@ const notFound = require('./middleware/notFound')
 const handleErrors = require('./middleware/handleErrors')
 app.use(cors())
 
-app.use(express.json())
-
 app.use(express.static('build'))
+app.use(express.json())
 
 /* const persons = [
   {
