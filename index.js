@@ -1,4 +1,7 @@
-require('dotenv').config()
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
 require('./mongo')
 const express = require('express')
 const morgan = require('morgan')
